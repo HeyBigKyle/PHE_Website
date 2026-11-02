@@ -502,29 +502,10 @@
           <div><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span><small>Based in</small>Surprise, Arizona · Serving Greater Phoenix</span></div>
         </div>
       </div>
-      <form class="quote-form" id="quote-form">
-        <div class="f-row">
-          <label class="fl">Name<input name="name" type="text" autocomplete="name" placeholder="Your name" required /></label>
-          <label class="fl">Phone<input name="phone" type="tel" autocomplete="tel" placeholder="(602) 555-0100" /></label>
-        </div>
-        <label class="fl">What are we working on?
-          <select name="project">
-            <option>Home theater / media room</option>
-            <option>Whole-home audio / Sonos</option>
-            <option>TV mounting &amp; installation</option>
-            <option>Smart home &amp; control</option>
-            <option>Security &amp; cameras</option>
-            <option>Motorized shades</option>
-            <option>Fixing / upgrading an existing system</option>
-            <option>Something else</option>
-          </select>
-        </label>
-        <label class="fl">Tell us about the room<textarea name="details" placeholder="Room size, what you have now, what you want it to do…"></textarea></label>
-        <button class="btn btn-copper" type="submit" style="justify-content:center">Send request to PHE
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </button>
-        <p class="form-note" id="form-note">In this mockup the button opens your email app addressed to sales@phe-tv.com. On the real build, this same form feeds straight into Jobber — like your current quote flow — so nothing gets lost between the website and the job board.</p>
-      </form>
+      <div class="quote-form" id="quote-form">
+        <!-- Real Jobber "Request a quote" embed: submissions land directly in Jobber as quote requests -->
+        <div id="b4ce18d4-a547-45c8-9151-2aa6a1b061df-5325666"></div><link rel="stylesheet" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css" media="screen" /><script src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js" clienthub_id="b4ce18d4-a547-45c8-9151-2aa6a1b061df-5325666" form_url="https://clienthub.getjobber.com/client_hubs/b4ce18d4-a547-45c8-9151-2aa6a1b061df/public/work_request/embedded_work_request_form?form_id=5325666"></script>
+      </div>
     </div>
   </section>
 
@@ -624,15 +605,7 @@
   sBtns.forEach(function(b){ b.addEventListener("click", function(){ setFix(b.getAttribute("data-fix")); }); });
   setFix("sound");
 
-  /* ---------- quote form -> email draft ---------- */
-  var form = document.getElementById("quote-form");
-  form.addEventListener("submit", function(e){
-    e.preventDefault();
-    var fd = new FormData(form);
-    var body = "Name: " + (fd.get("name")||"") + "\nPhone: " + (fd.get("phone")||"") + "\nProject: " + (fd.get("project")||"") + "\n\n" + (fd.get("details")||"");
-    window.location.href = "mailto:sales@phe-tv.com?subject=" + encodeURIComponent("Quote request — " + (fd.get("project")||"PHE project")) + "&body=" + encodeURIComponent(body);
-    document.getElementById("form-note").textContent = "Opening your email app with the request addressed to sales@phe-tv.com — just hit send. (On the live build this posts directly to Jobber.)";
-  });
+  /* Jobber embed handles quote submissions directly */
 
 })();
 
