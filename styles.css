@@ -6,6 +6,14 @@
    ============================================================ */
 
 :root{
+    --bg:#081426; --bg-2:#0c1e38; --surface:#102540; --surface-2:#143050;
+    --ink:#e9eff7; --ink-2:#b4c3d7; --ink-3:#8c9cb4;
+    --line:rgba(233,239,247,.14); --line-strong:rgba(233,239,247,.28);
+    --copper:#f0742a; --copper-deep:#f0742a; --copper-soft:#1d3a66;
+    --shadow:0 18px 44px rgba(0,0,0,.45);
+  }
+@media (prefers-color-scheme: light){
+  :root{
   --bg:#f1f4f7; --bg-2:#e4e9ef; --surface:#ffffff; --surface-2:#ebeef2;
   --ink:#0e1e35; --ink-2:#3d4d65; --ink-3:#687892;
   --line:rgba(14,30,53,.12); --line-strong:rgba(14,30,53,.24);
@@ -17,14 +25,6 @@
   --font-sans:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --font-serif:"Newsreader",Georgia,"Times New Roman",serif;
 }
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#081426; --bg-2:#0c1e38; --surface:#102540; --surface-2:#143050;
-    --ink:#e9eff7; --ink-2:#b4c3d7; --ink-3:#8c9cb4;
-    --line:rgba(233,239,247,.14); --line-strong:rgba(233,239,247,.28);
-    --copper:#f0742a; --copper-deep:#f0742a; --copper-soft:#1d3a66;
-    --shadow:0 18px 44px rgba(0,0,0,.45);
-  }
 }
 
 *{box-sizing:border-box}
@@ -54,18 +54,18 @@ header.nav{
 .nav-in{display:flex;align-items:center;gap:20px;padding:14px 0}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;margin-right:auto}
 .brand-mark{
-  width:40px;height:40px;border-radius:11px;background:var(--dark);color:#fff;
+  width:40px;height:40px;border-radius:11px;background:var(--copper);color:#0b1a33;
   display:grid;place-items:center;font-weight:900;font-size:13px;letter-spacing:.06em;flex:none;
 }
-@media (prefers-color-scheme: dark){.brand-mark{background:var(--copper);color:#0b1a33}}
+@media (prefers-color-scheme: light){.brand-mark{background:var(--dark);color:#fff}}
 .brand-name{line-height:1.05}
 .brand-name strong{display:block;font-size:17px;font-weight:800;letter-spacing:-.01em}
 .brand-name span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
 .nav-links{display:none;gap:20px;font-size:14px;font-weight:600}
 .nav-links a{text-decoration:none;color:var(--ink-2)}
 .nav-links a:hover{color:var(--ink)}
-.nav-links a[aria-current="page"]{color:var(--copper-deep)}
-@media (prefers-color-scheme: dark){.nav-links a[aria-current="page"]{color:var(--copper)}}
+.nav-links a[aria-current="page"]{color:var(--copper)}
+@media (prefers-color-scheme: light){.nav-links a[aria-current="page"]{color:var(--copper-deep)}}
 @media(min-width:1020px){.nav-links{display:flex}}
 .nav-phone{display:none;font-weight:700;font-size:14.5px;text-decoration:none;white-space:nowrap}
 @media(min-width:640px){.nav-phone{display:block}}
@@ -281,8 +281,8 @@ footer a{text-underline-offset:3px}
 @media(min-width:820px){.link-groups{grid-template-columns:repeat(3,1fr)}}
 .link-group h3{margin:0 0 12px;font-size:16px;font-weight:800}
 .link-group ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.link-group a{color:var(--copper-deep);font-weight:700;font-size:15px;text-decoration:none}
-@media (prefers-color-scheme: dark){.link-group a{color:var(--copper)}}
+.link-group a{color:var(--copper);font-weight:700;font-size:15px;text-decoration:none}
+@media (prefers-color-scheme: light){.link-group a{color:var(--copper-deep)}}
 .link-group a:hover{text-decoration:underline}
 .chip-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 
@@ -296,9 +296,9 @@ footer a{text-underline-offset:3px}
 .faq .a{margin:12px 0 2px;color:var(--ink-2);font-size:15px}
 
 /* ---------- misc ---------- */
-.incl-list p a{color:var(--copper-deep);font-weight:700}
-@media (prefers-color-scheme: dark){.incl-list p a{color:var(--copper)}}
+.incl-list p a{color:var(--copper);font-weight:700}
+@media (prefers-color-scheme: light){.incl-list p a{color:var(--copper-deep)}}
 .center-line{text-align:center;color:var(--ink-2);font-size:15px}
 .link-p{color:var(--ink-2);font-size:15px}
-.link-p a{color:var(--copper-deep);font-weight:700}
-@media (prefers-color-scheme: dark){.link-p a{color:var(--copper)}}
+.link-p a{color:var(--copper);font-weight:700}
+@media (prefers-color-scheme: light){.link-p a{color:var(--copper-deep)}}
