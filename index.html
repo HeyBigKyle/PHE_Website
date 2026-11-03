@@ -32,18 +32,7 @@
       --copper:#f0742a; --copper-deep:#f0742a; --copper-soft:#1d3a66;
       --shadow:0 18px 44px rgba(0,0,0,.45);
     }
-  @media (prefers-color-scheme: light){
-    :root{
-    --bg:#f1f4f7; --bg-2:#e4e9ef; --surface:#ffffff; --surface-2:#ebeef2;
-    --ink:#0e1e35; --ink-2:#3d4d65; --ink-3:#687892;
-    --line:rgba(14,30,53,.12); --line-strong:rgba(14,30,53,.24);
-    --copper:#e8641c; --copper-deep:#bd4e0d; --copper-soft:#fde9d7;
-    --dark:#0a1c38; --dark-2:#10294e; --dark-ink:#edf2f8; --dark-ink2:#a7b9d0;
-    --gold:#f2994a;
-    --radius:18px;
-    --shadow:0 18px 44px rgba(10,28,56,.15);
-  }
-  }
+  
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important;transition:none!important} }
@@ -59,7 +48,7 @@
   .nav-in{display:flex;align-items:center;gap:22px;padding:14px 0}
   .brand{display:flex;align-items:center;gap:11px;text-decoration:none;margin-right:auto}
   .brand-mark{width:40px;height:40px;border-radius:11px;background:var(--copper);color:#0b1a33;display:grid;place-items:center;font-weight:900;font-size:13px;letter-spacing:.06em;flex:none}
-  @media (prefers-color-scheme: light){.brand-mark{background:var(--dark);color:#fff}}
+  
   .brand-name{line-height:1.05}
   .brand-name strong{display:block;font-size:17px;font-weight:800;letter-spacing:-.01em}
   .brand-name span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
@@ -125,14 +114,14 @@
   .svc:hover{border-color:var(--line-strong);transform:translateY(-3px)}
   .svc-top{display:flex;align-items:flex-start;justify-content:space-between}
   .svc-icon{width:46px;height:46px;border-radius:13px;background:var(--copper-soft);color:var(--copper-deep);display:grid;place-items:center}
-  @media (prefers-color-scheme: light){.svc-icon{color:var(--copper)}}
+  
   .svc-num{font-size:12px;font-weight:800;color:var(--ink-3);letter-spacing:.1em}
   .svc h3{margin:4px 0 0;font-size:20px;font-weight:800;letter-spacing:-.01em}
   .svc p{margin:0;color:var(--ink-2);font-size:15px;flex:1}
   .svc-tags{display:flex;flex-wrap:wrap;gap:6px}
   .svc-tags span{font-size:12px;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--ink-2)}
   .svc-link{font-weight:700;font-size:14.5px;color:var(--copper-deep);display:inline-flex;gap:7px;align-items:center;margin-top:6px}
-  @media (prefers-color-scheme: light){.svc-link{color:var(--copper)}}
+  
 
   /* ---------- chips ---------- */
   .chips{display:flex;flex-wrap:wrap;gap:8px}
