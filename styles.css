@@ -59,7 +59,7 @@ header.nav{
 
 /* ---------- buttons ---------- */
 .btn{
-  display:inline-flex;align-items:center;gap:9px;border-radius:999px;
+  display:inline-flex;align-items:center;gap:9px;border-radius:16px;
   padding:13px 24px;font-weight:700;font-size:15px;text-decoration:none;
   border:1px solid transparent;cursor:pointer;font-family:inherit;
   transition:transform .15s ease,background .15s ease;
